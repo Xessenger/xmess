@@ -156,7 +156,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-icon-button icon="more-vert" style="color:#fafafa;" class="dropdown-trigger"></paper-icon-button>
       <paper-menu class="dropdown-content">
         <paper-item onclick="username()">Change Username</paper-item>
-        <paper-item onclick="window.open('https://theandroidmaster.github.io/Messenger/help.html')">Help</paper-item>
+        <paper-item onclick="window.open('https://horrificallycoded.github.io/Messenger/help.html')">Help</paper-item>
       </paper-menu>
     </paper-menu-button>
   </div>
@@ -224,11 +224,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   if (!getUrlVar()) {
     room = "log";
     document.getElementById("room").value = room;
-    window.history.pushState({}, null, "https://theandroidmaster.github.io/Messenger/?room=" + room);
+    window.history.pushState({}, null, "https://horrificallycoded.github.io/Messenger/?room=" + room);
   } else {
     room = getUrlVar();
     document.getElementById("room").value = room;
-    window.history.pushState({}, null, "https://theandroidmaster.github.io/Messenger/?room=" + room);
+    window.history.pushState({}, null, "https://horrificallycoded.github.io/Messenger/?room=" + room);
   }
   
   onAction('joined the chat');
@@ -327,7 +327,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
       reset();
-      if (!loaded && !firstload) new Audio('https://theandroidmaster.github.io/Messenger/notify.mp3').play();
+      if (!loaded && !firstload) new Audio('https://horrificallycoded.github.io/Messenger/notify.mp3').play();
       firstload = false;
     }
   }
@@ -350,7 +350,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       onAction("left the chat");
       room = document.getElementById("room").value;
       onAction("joined the chat");
-      window.history.pushState({}, null, "https://theandroidmaster.github.io/Messenger/?room=" + room);
+      window.history.pushState({}, null, "https://horrificallycoded.github.io/Messenger/?room=" + room);
     }
     
     var xhr = createCORSRequest('GET', "http://spacial-maximum.000webhostapp.com/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + room + "&request=" + userid);
@@ -370,7 +370,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       onAction("left the chat");
       room = document.getElementById("room").value;
       onAction("joined the chat");
-      window.history.pushState({}, null, "https://theandroidmaster.github.io/Messenger/?room=" + room);
+      window.history.pushState({}, null, "https://horrificallycoded.github.io/Messenger/?room=" + room);
     }
     
     var xhr = createCORSRequest('GET', "http://spacial-maximum.000webhostapp.com/loghandler.php?fchat=" + room);
