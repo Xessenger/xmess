@@ -22,17 +22,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="msapplication-TileColor" content="#3372DF">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="JF">
-  <link rel="icon" sizes="256x256" href="http://theandroidmaster.github.io/jf2.ico">
+  <link rel="icon" sizes="256x256" href="https://theandroidmaster.github.io/jf2.ico">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Chatroom">
-  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="http://theandroidmaster.github.io/touch-icon-iphone-retina">
-  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="http://theandroidmaster.github.io/touch-icon-ipad">
-  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="http://theandroidmaster.github.io/touch-icon-ipad-retina">
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="https://theandroidmaster.github.io/touch-icon-iphone-retina">
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="https://theandroidmaster.github.io/touch-icon-ipad">
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="https://theandroidmaster.github.io/touch-icon-ipad-retina">
   <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-  <link rel="stylesheet" href="http://theandroidmaster.github.io/styles/main.css">
-  <script src="http://theandroidmaster.github.io/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-  <link rel="import" href="http://theandroidmaster.github.io/elements/elements.html">
+  <link rel="stylesheet" href="https://theandroidmaster.github.io/styles/main.css">
+  <script src="https://theandroidmaster.github.io/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="https://theandroidmaster.github.io/elements/elements.html">
   <style is="custom-style" include="shared-styles"></style>
   <style>
     ::-webkit-scrollbar {
@@ -156,7 +156,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-icon-button icon="more-vert" style="color:#fafafa;" class="dropdown-trigger"></paper-icon-button>
       <paper-menu class="dropdown-content">
         <paper-item onclick="username()">Change Username</paper-item>
-        <paper-item onclick="window.open('http://theandroidmaster.github.io/Messenger/help.html')">Help</paper-item>
+        <paper-item onclick="window.open('https://theandroidmaster.github.io/Messenger/help.html')">Help</paper-item>
       </paper-menu>
     </paper-menu-button>
   </div>
@@ -192,7 +192,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       user = user.slice(0, 45) + "...";
     }
     
-    var xhe = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?user=" + user);
+    var xhe = createCORSRequest('GET', "https://contrastive-telecom.000webhostapp.com/log.php?user=" + user);
     if (!xhe) {
       throw new Error('CORS not supported');
     }
@@ -244,7 +244,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     firstload = true;
   }
   window.onbeforeunload = function (e) {
-    var xhe = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?delete=yes&?user=" + user);
+    var xhe = createCORSRequest('GET', "https://contrastive-telecom.000webhostapp.com/log.php?delete=yes&?user=" + user);
     if (!xhe) {
       throw new Error('CORS not supported');
     }
@@ -301,7 +301,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if (old.length !== refresh.length) {
       document.getElementById("text").innerHTML += refresh;
       
-      var xhe = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?user=" + user);
+      var xhe = createCORSRequest('GET', "https://contrastive-telecom.000webhostapp.com/log.php?user=" + user);
       if (!xhe) {
         throw new Error('CORS not supported');
       }
@@ -333,7 +333,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onAction(action) {
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + action + "&fchat=" + room);
+    var xhr = createCORSRequest('GET', "https://contrastive-telecom.000webhostapp.com/loghandler.php?fname=" + user + "&fcontent=" + action + "&fchat=" + room);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -353,7 +353,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       window.history.pushState({}, null, "https://theandroidmaster.github.io/Messenger/?room=" + room);
     }
     
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + room + "&request=" + userid);
+    var xhr = createCORSRequest('GET', "https://contrastive-telecom.000webhostapp.com/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + room + "&request=" + userid);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -370,10 +370,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       onAction("left the chat");
       room = document.getElementById("room").value;
       onAction("joined the chat");
-      window.history.pushState({}, null, "http://theandroidmaster.github.io/apps/server/?room=" + room);
+      window.history.pushState({}, null, "https://theandroidmaster.github.io/Messenger/?room=" + room);
     }
     
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fchat=" + room);
+    var xhr = createCORSRequest('GET', "https://contrastive-telecom.000webhostapp.com/loghandler.php?fchat=" + room);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
