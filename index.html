@@ -281,11 +281,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     } else if (typeof XDomainRequest != "undefined") {
       xhr = new XDomainRequest();
       xhr.open(method, url);
-    } else {
-      xhr = null;
-    }
+    } else return nullptr;
+    
+    xhr.withCredentials = true;
     return xhr;
   }
+    
   var old = "";
   function update(response) {
     var str_array = response.split('<br>');
