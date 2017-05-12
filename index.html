@@ -192,7 +192,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       user = user.slice(0, 45) + "...";
     }
     
-    var xhe = createCORSRequest('GET', "https://spacial-maximum.000webhostapp.com/log.php?user=" + user);
+    var xhe = createCORSRequest('GET', "http://spacial-maximum.000webhostapp.com/log.php?user=" + user);
     if (!xhe) {
       throw new Error('CORS not supported');
     }
@@ -244,7 +244,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     firstload = true;
   }
   window.onbeforeunload = function (e) {
-    var xhe = createCORSRequest('GET', "https://spacial-maximum.000webhostapp.com/log.php?delete=yes&?user=" + user);
+    var xhe = createCORSRequest('GET', "http://spacial-maximum.000webhostapp.com/log.php?delete=yes&?user=" + user);
     if (!xhe) {
       throw new Error('CORS not supported');
     }
@@ -301,7 +301,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if (old.length !== refresh.length) {
       document.getElementById("text").innerHTML += refresh;
       
-      var xhe = createCORSRequest('GET', "https://spacial-maximum.000webhostapp.com/log.php?user=" + user);
+      var xhe = createCORSRequest('GET', "http://spacial-maximum.000webhostapp.com/log.php?user=" + user);
       if (!xhe) {
         throw new Error('CORS not supported');
       }
@@ -333,7 +333,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onAction(action) {
-    var xhr = createCORSRequest('GET', "https://spacial-maximum.000webhostapp.com/loghandler.php?fname=" + user + "&fcontent=" + action + "&fchat=" + room);
+    var xhr = createCORSRequest('GET', "http://spacial-maximum.000webhostapp.com/loghandler.php?fname=" + user + "&fcontent=" + action + "&fchat=" + room);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -353,7 +353,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       window.history.pushState({}, null, "https://theandroidmaster.github.io/Messenger/?room=" + room);
     }
     
-    var xhr = createCORSRequest('GET', "https://spacial-maximum.000webhostapp.com/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + room + "&request=" + userid);
+    var xhr = createCORSRequest('GET', "http://spacial-maximum.000webhostapp.com/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + room + "&request=" + userid);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -373,7 +373,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       window.history.pushState({}, null, "https://theandroidmaster.github.io/Messenger/?room=" + room);
     }
     
-    var xhr = createCORSRequest('GET', "https://spacial-maximum.000webhostapp.com/loghandler.php?fchat=" + room);
+    var xhr = createCORSRequest('GET', "http://spacial-maximum.000webhostapp.com/loghandler.php?fchat=" + room);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
