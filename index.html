@@ -165,19 +165,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-tab onclick="document.getElementById('pages').select('1')">Users</paper-tab>
   </paper-tabs>
   
-  <iron-pages id="pages" selected="0">
-    <div>
-      <paper-material style="margin-top:156px; margin-bottom:96px;">
-        <p id="text" class="text"></p>
-      </paper-material>
-    </div>
-    <div>
-      <paper-material style="margin-top:156px; margin-bottom:96px;">
-        <p id="users" class="text"></p>
-      </paper-material>
-    </div>
-  </iron-pages>
-  
+  <paper-material style="margin-top:156px; margin-bottom:96px;">
+    <p id="text" class="text"></p>
+  </paper-material>
     
   <div class="msgbackground">
     <paper-input id="msg" error-message="Invalid input!" maxlength="250" min-length="2" char-counter="" auto-validate="" label="Message" style="float: left; width: 80%;"></paper-input>
@@ -195,12 +185,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var xhe = createCORSRequest('GET', "https://spacial-maximum.000webhostapp.com/log.php?user=" + user);
     if (!xhe) {
       throw new Error('CORS not supported');
-    }
-    xhe.onload = function() {
-      document.getElementById('users').innerHTML = xhe.responseText;
-      if (document.getElementById('users').innerHTML.indexOf(user + "<br>") > -1) {
-        username();
-      }
     }
     xhe.send();
   }
@@ -244,23 +228,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     firstload = true;
   }
   window.onbeforeunload = function (e) {
-    var xhe = createCORSRequest('GET', "https://spacial-maximum.000webhostapp.com/log.php?delete=yes&?user=" + user);
-    if (!xhe) {
-      throw new Error('CORS not supported');
-    }
-    xhe.onload = function() {
-      //update(xhr.responseText);
-      document.getElementById('users').innerHTML = xhe.responseText;
-      if (xhe.responseText.indexOf(user + "<br>") > -1) {
-        username();
-      } else {
-        xhe.onload = function() {
-          document.getElementById('users').innerHTML = xhe.responseText;
-        }
-      }
-    }
-    xhe.send(); 
-    
     onAction('left the chat');
     loaded = false;
   }
@@ -304,13 +271,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       var xhe = createCORSRequest('GET', "https://spacial-maximum.000webhostapp.com/log.php?user=" + user);
       if (!xhe) {
         throw new Error('CORS not supported');
-      }
-      xhe.onload = function() {
-        //update(xhr.responseText);
-        document.getElementById('users').innerHTML = xhe.responseText;
-        if (xhe.responseText.indexOf(user + "<br>") > -1) {
-          username();
-        }
       }
       xhe.send(); 
       
