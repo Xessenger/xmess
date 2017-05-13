@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><body><?php
-header("Access-Control-Allow-Origin: https://theandroidmaster.github.io");
+header("Access-Control-Allow-Origin: https://horrificallycoded.github.io");
 $name = htmlspecialchars($_GET["user"]);
 $delete = $_GET["delete"];
 $filename = "users.txt";
