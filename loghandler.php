@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><body><?php
-header("Access-Control-Allow-Origin: https://theandroidmaster.github.io");
+header("Access-Control-Allow-Origin: https://horrificallycoded.github.io");
 $filename = $_GET["fchat"];
 if (empty($filename)) {
  $filename = "log";
@@ -34,37 +34,37 @@ if (empty($fcontent)) {
   
   //colors
   if (strpos($fcontent, "/red ") !== false) {
-   $fcontent = "<p style=\"color:#f44336;\">" . str_replace("/red ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#FF5252;\">" . str_replace("/red ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/pink ") !== false) {
-   $fcontent = "<p style=\"color:#e91e63;\">" . str_replace("/pink ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#FF4081;\">" . str_replace("/pink ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/purple ") !== false) {
-   $fcontent = "<p style=\"color:#9c27B0;\">" . str_replace("/purple ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#E040FB;\">" . str_replace("/purple ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/indigo ") !== false) {
-   $fcontent = "<p style=\"color:#3f51b5;\">" . str_replace("/indigo ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#536DFE;\">" . str_replace("/indigo ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/blue ") !== false) {
-   $fcontent = "<p style=\"color:#2196f3;\">" . str_replace("/blue ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#448AFF;\">" . str_replace("/blue ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/cyan ") !== false) {
-   $fcontent = "<p style=\"color:#0097a7;\">" . str_replace("/cyan ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#00B8D4;\">" . str_replace("/cyan ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/teal ") !== false) {
-   $fcontent = "<p style=\"color:#009688;\">" . str_replace("/cyan ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#00BFA5;\">" . str_replace("/cyan ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/green ") !== false) {
-   $fcontent = "<p style=\"color:#43a047;\">" . str_replace("/green ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#00C853;\">" . str_replace("/green ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/lime ") !== false) {
-   $fcontent = "<p style=\"color:#827717;\">" . str_replace("/lime ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#AEEA00;\">" . str_replace("/lime ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/yellow ") !== false) {
-   $fcontent = "<p style=\"color:#FBC02D;\">" . str_replace("/yellow ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#FFD600;\">" . str_replace("/yellow ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/orange ") !== false) {
-   $fcontent = "<p style=\"color:#ef6c00;\">" . str_replace("/orange ", "", $fcontent) . "</p>";
+   $fcontent = "<p style=\"color:#FF6D00;\">" . str_replace("/orange ", "", $fcontent) . "</p>";
   }
   if (strpos($fcontent, "/brown ") !== false) {
    $fcontent = "<p style=\"color:#795548;\">" . str_replace("/brown ", "", $fcontent) . "</p>";
@@ -85,34 +85,34 @@ if (empty($fcontent)) {
   $ip = $_GET["request"];
   switch($ip) {
    case 0 :
-    $color = "#f44336";
+    $color = "#FF5252";
     break;
    case 1 :
-    $color = "#2196f3";
+    $color = "#448AFF";
     break;
    case 2 :
-    $color = "#009688";
+    $color = "#00BFA5";
     break;
    case 3 :
-    $color = "#43a047";
+    $color = "#00C853";
     break;
    case 4 :
-    $color = "#ff5722";
+    $color = "#FF6D00";
     break;
    case 5 :
-    $color = "#607d8b";
+    $color = "#607D8B";
     break;
    case 6 :
-    $color = "#3f51b5";
+    $color = "#536DFE";
     break;
    case 7 :
     $color = "#689f38";
     break;
    case 8 :
-    $color = "#ef6c00";
+    $color = "#00C853";
     break;
    case 9 :
-    $color = "#263238";
+    $color = "#00B8D4";
     break;
   }
   
